@@ -74,7 +74,7 @@ module JavaBuildpack
 
         modified = standalone_config.read
                      .gsub(/<virtual-server name="default-host" enable-welcome-root="true">/,
-                           '<virtual-server name="default-host" enable-welcome-root="false">')
+                           '<virtual-server name="default-host" enable-welcome-root="true">')
                      .gsub(%r{<socket-binding name="http" port="8080"/>},
                            '<socket-binding name="http" port="${http.port}"/>')
 
